@@ -1,5 +1,4 @@
 import time
-from types import CodeType
 from selenium import webdriver
 import requests
 import cv2 as cv
