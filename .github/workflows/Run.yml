@@ -1,9 +1,8 @@
-name:RS-sign in
+name: Run
 
-on:
-  push:
+on: 
   schedule:
-    - cron: '0 23 * * *'
+  - cron: '0 23 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,4 +25,3 @@ jobs:
         pip install Pillow
     - name: run
       run: python text.py
-        
