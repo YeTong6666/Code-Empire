@@ -44,7 +44,7 @@ chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chromedriver = "/usr/bin/chromedriver.exe"
 os.environ["webdriver.chrome.driver"] = chromedriver
-driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
+
 
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
