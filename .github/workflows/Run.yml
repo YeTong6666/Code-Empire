@@ -1,7 +1,6 @@
-name:RS-sign in
+name:Run
 
 on:
-  push:
   schedule:
     - cron: '0 23 * * *'
   workflow_dispatch:
