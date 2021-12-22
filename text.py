@@ -5,7 +5,7 @@ import requests
 import cv2 as cv
 from PIL import Image
 from chaojiying import Chaojiying_Client
-
+import os
 
 def save_img():
     # 对当前页面进行截图保存
@@ -37,12 +37,14 @@ def narrow_img():
     small_img.save('./small_img.png')
     print(code.size, small_img.size)
 
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-# options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(executable_path="/root/chromedriver",
-chrome_options=options)
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chromedriver = "/usr/bin/chromedriver"
+os.environ["webdriver.chrome.driver"] = chromedriver
+driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
