@@ -26,7 +26,7 @@ jobs:
         pip install Pillow
     - name: 'Working'
       run: |
-        sudo cp -p ./CODE/chrome/chromedriver /usr/bin/
+        sudo cp -p ./chrome/chromedriver /usr/bin/
         chmod -R 777 /usr/bin/chromedriver
     - name: run
       run: python text.py
