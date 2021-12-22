@@ -1,5 +1,6 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import requests
 import cv2 as cv
 from PIL import Image
@@ -35,6 +36,13 @@ def narrow_img():
     small_img = code.resize((169, 216))
     small_img.save('./small_img.png')
     print(code.size, small_img.size)
+
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+# options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome(executable_path="/root/chromedriver",
+chrome_options=options)
 
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
