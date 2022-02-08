@@ -37,17 +37,16 @@ def narrow_img():
     small_img.save('./small_img.png')
     print(code.size, small_img.size)
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--disable-dev-shm-usage')
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-gpu')
+options.add_argument('--disable-dev-shm-usage')
+options.binary_location = '/snap/chromium/1899/usr/lib/chromium-browser/chrome'
 
 
-option = webdriver.ChromeOptions()
-option.add_experimental_option("detach", True)
 
-driver = webdriver.Chrome(options=option)
+driver = webdriver.Chrome(options=options)
 driver.get('http://rs.xidian.edu.cn/forum.php')
 driver.maximize_window()
 
