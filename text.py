@@ -47,7 +47,7 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 option = webdriver.ChromeOptions()
 option.add_experimental_option("detach", True)
 
-driver = webdriver.Chrome(chrome_options=option)
+driver = webdriver.Chrome(options=option)
 driver.get('http://rs.xidian.edu.cn/forum.php')
 driver.maximize_window()
 
