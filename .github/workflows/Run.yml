@@ -19,7 +19,7 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        apt install chromium-chromedriver
+        sudo apt install chromium-chromedriver
         python -m pip install --upgrade pip
         pip install requests
         pip install opencv-python
