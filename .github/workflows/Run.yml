@@ -17,6 +17,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+    - name: webdriver
+      run: |
+        sudo apt install chromium-chromedriver
+        chromedriver --version
+        google-chrome --version
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -24,9 +29,5 @@ jobs:
         pip install opencv-python
         pip install selenium
         pip install Pillow
-    - name: 'Working'
-      run: |
-        sudo cp -p ./chromedriver.exe /usr/bin/
-        chmod -R 777 /usr/bin/chromedriver.exe
     - name: run
       run: python text.py
