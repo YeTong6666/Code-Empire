@@ -42,7 +42,6 @@ options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
 options.add_argument('--disable-dev-shm-usage')
-options.binary_location = '/snap/chromium/1899/usr/lib/chromium-browser/chrome'
 
 
 
