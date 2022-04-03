@@ -19,7 +19,8 @@ jobs:
         python-version: '3.x'
     - name: webdriver
       run: |
-        sudo apt install chromium-chromedriver
+        sudo apt install chromium-browser
+        sudo apt install chromium-chromedriver=1:85.0.4183.83-0ubuntu0.20.04.2
         chromedriver --version
         google-chrome --version
     - name: Install dependencies
