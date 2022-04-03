@@ -19,10 +19,7 @@ jobs:
         python-version: '3.x'
     - name: webdriver
       run: |
-        cd ~
-        wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chromium-browser/chromium-browser_80.0.3987.163-0ubuntu1_amd64.deb
-        wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chromium-browser/chromium-chromedriver_80.0.3987.163-0ubuntu1_amd64.deb
-        sudo dpkg -i chromium-browser_80.0.3987.163-0ubuntu1_amd64.deb chromium-chromedriver_80.0.3987.163-0ubuntu1_amd64.deb 
+        sudo apt install chromium-chromedriver
         chromedriver --version
         google-chrome --version
     - name: Install dependencies
